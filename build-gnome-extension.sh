@@ -7,8 +7,11 @@
 #
 # yomun   ALL=(ALL) NOPASSWD: ALL
 ###################################
-ID="jasonmun@yahoo.com"
-UID="yomun"
+# ID="jasonmun@yahoo.com"     # Auto OVPN
+ID="auto-git@yahoo.com"     # Auto GIT
+# ID="backup-tools@yahoo.com" # Backup Tools
+# ID="yomun@yahoo.com"        # Sound Settings
+USER_ID="yomun"
 DIR="/home/yomun"
 ###################################
 
@@ -26,7 +29,7 @@ rm -rf ovpn/*
 # Zip
 sudo chown -R root:root *
 zip -r ${ID}.zip . -x \*.git* \*.idea* \others\* \locale\*.txt
-sudo chown -R ${UID}:${UID} *
+sudo chown -R ${USER_ID}:${USER_ID} *
 
 # Zip move to Desktop
 mv ${ID}.zip ${DIR}/Desktop
